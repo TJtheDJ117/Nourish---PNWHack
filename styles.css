@@ -2,11 +2,11 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Kumbh Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 .navbar {
-    background: #131313;
+    background: #344e41;
     height: 80px;
     display: flex;
     justify-content: center;
@@ -28,8 +28,8 @@
 }
 
 #navbar__logo {
-    background-color: #ff8177;
-    background-image: linear-gradient(to top, #ff0844 0%, #ff8199 100%);
+    background-color: #dad7cd;
+    background-image: linear-gradient(to top, #dad7cd 0%, #dad7cd 100%);
     background-size: 100%;
     -webkit-background-clip: text;
     -moz-background-clip: text;
@@ -40,6 +40,7 @@
     cursor: pointer;
     text-decoration: none;
     font-size: 2rem;
+    font-weight: bold;
 }
 
 .fa-gem {
@@ -57,7 +58,7 @@
 }
 
 .navbar__links {
-    color: #fff;
+    color: #dad7cd;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -82,17 +83,17 @@
     padding: 10px 20px;
     height: 100%;
     width: 100%;
-    background: #f77062;
+    background: #a3b18a;
     color: #fff;
 }
 
 .button:hover {
-    background: #4837ff;
+    background: #588157;
     transition: all 0.3s ease;
 }
 
 .navbar__links:hover {
-    color: #f77062;
+    color: #a3b18a;
     transition: all 0.3s ease;
 }
 
