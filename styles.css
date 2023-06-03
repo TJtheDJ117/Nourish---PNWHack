@@ -189,4 +189,49 @@
     #mobile-menu.is-active .bar:nth-child(3) {
         transform: translateY(-8px) rotate(-45deg);
     }
+
+    .intro {
+        flex: 2;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        background: grey;
+        font-size: 30px;
+    }
 }
+.main {
+    display: flex;
+}
+
+.main__container {
+    flex: 1;
+}
+
+.main__content {
+    flex: 1;
+    background: blue;
+}
+
+.title-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .title {
+    font-size: 4rem;
+    color: #333;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  .maintitle {
+    font-size: 8rem;
+    color: #333;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
