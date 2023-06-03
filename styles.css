@@ -188,4 +188,34 @@
     #mobile-menu.is-active .bar:nth-child(3) {
         transform: translateY(-8px) rotate(-45deg);
     }
+
+    .intro {
+        flex: 2;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        background: grey;
+        font-size: 30px;
+    }
+}
+.main {
+    display: flex;
+}
+
+.main__container {
+    flex: 1;
+}
+
+.intro {
+    flex: 2;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: grey;
+    font-size: 50px;
+}
+
+.main__content {
+    flex: 1;
+    background: blue;
 }
