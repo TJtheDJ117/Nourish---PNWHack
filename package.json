@@ -1,4 +1,6 @@
 {
-"name" : "pnwhack"
-
+"name" : "pnwhack" ,
+"version" : "1.0.0" ,
+"description": "" ,
+"main": "index.html"
 }
