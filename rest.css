@@ -1,5 +1,37 @@
-.header {
-    display: flex;
-    justify-content: space-between;
-}
+  .welcome {
+    color: #fff;
+    padding-left: 30px;
+  }
 
+  body {
+    background: radial-gradient(#fff, #3a5a40);
+
+  }
+
+  .container {
+    display: flex;
+    height: 100vh;
+    color: #3a5a40;
+  }
+  
+  .half {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .content {
+    padding: 10px;
+    position: relative;
+    top: -150px;
+    font-size: 30px;
+    text-decoration: underline;
+  }
+
+  img {
+    width: 50%;
+    height: auto;
+  }
+  
