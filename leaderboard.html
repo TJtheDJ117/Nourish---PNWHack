@@ -9,8 +9,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="leaderboard.css">
 </head>
     <body>
+        <script type="module" src="leaderboard.js"></script>
         <nav class="navbar">
             <div class="navbar__container">
                 <a href="index.html" id="navbar__logo"><i class="fa-solid fa-fork-knife"></i> nourish.</a>
@@ -35,9 +37,65 @@
                 </ul>
             </div>
         </nav>
-        <form onsubmit="makeBoard()">
-            <button type="submit">Submit</button>
-        </form>
-        <script type="module" src="leaderboard.js"></script>
+        <div class="leaderboard">
+            <h1 class="leaderboard-title">Food Donated</h1>
+
+            <div class="leaderboard-item">
+                <div class="leaderboard-rank">Rank</div>
+                <div class="leaderboard-name">Name</div>
+                <div class="leaderboard-score">Lbs of Food Donated</div>
+            </div>
+            <div class="leaderboard-item">
+              <div class="leaderboard-rank">1</div>
+              <div class="leaderboard-name">Burger King</div>
+              <div class="leaderboard-score">1000000</div>
+            </div>
+            <div class="leaderboard-item">
+              <div class="leaderboard-rank">2</div>
+              <div class="leaderboard-name">Chipotle Mexican Grill</div>
+              <div class="leaderboard-score">11</div>
+            </div>
+            <div class="leaderboard-item">
+              <div class="leaderboard-rank">3</div>
+              <div class="leaderboard-name">Mike</div>
+              <div class="leaderboard-score">80</div>
+            </div>
+            <div class="leaderboard-item">
+                <div class="leaderboard-rank">4</div>
+                <div class="leaderboard-name">Mike</div>
+                <div class="leaderboard-score">80</div>
+              </div>
+            <div class="leaderboard-item">
+                <div class="leaderboard-rank">5</div>
+                <div class="leaderboard-name">Mike</div>
+                <div class="leaderboard-score">80</div>
+            </div>
+            <div class="leaderboard-item">
+                <div class="leaderboard-rank">6</div>
+                <div class="leaderboard-name">Mike</div>
+                <div class="leaderboard-score">80</div>
+            </div>
+            <div class="leaderboard-item">
+                <div class="leaderboard-rank">7</div>
+                <div class="leaderboard-name">Mike</div>
+                <div class="leaderboard-score">80</div>
+            </div>
+            <div class="leaderboard-item">
+                <div class="leaderboard-rank">8</div>
+                <div class="leaderboard-name">Mike</div>
+                <div class="leaderboard-score">80</div>
+            </div>
+            <div class="leaderboard-item">
+                <div class="leaderboard-rank">9</div>
+                <div class="leaderboard-name">Mike</div>
+                <div class="leaderboard-score">80</div>
+            </div>
+            <div class="leaderboard-item">
+                <div class="leaderboard-rank">10</div>
+                <div class="leaderboard-name">Mike</div>
+                <div class="leaderboard-score">80</div>
+            </div>
+            <!-- Add more leaderboard items as needed -->
+        </div>
     </body>
 </html>
