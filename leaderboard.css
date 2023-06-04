@@ -3,7 +3,7 @@
     background-color: #f5f5f5;
     margin: 0;
     padding: 0;
-    max-width: 700px;
+    max-width: 900px;
     margin: 20px auto;
     background-color: #f0f8f3;
     border-radius: 8px;
@@ -11,8 +11,15 @@
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+.example-name {
+    flex-grow: 1;
+    font-size: 25px;
+    color: #333333;
+    padding-left: 20px;
+}
+
 .leaderboard-title {
-    font-size: 24px;
+    font-size: 50px;
     font-weight: bold;
     color: #1f633a;
     margin-bottom: 20px;
@@ -26,21 +33,21 @@
 }
 
 .leaderboard-rank {
-    font-size: 18px;
+    font-size: 30px;
     font-weight: bold;
     color: #1f633a;
-    width: 30px;
+    width: 50px;
 }
 
 .leaderboard-name {
     flex-grow: 1;
-    font-size: 16px;
+    font-size: 25px;
     color: #333333;
-    padding-left: 10px;
+    padding-left: 70px;
 }
 
 .leaderboard-score {
-    font-size: 18px;
+    font-size: 30px;
     font-weight: bold;
     color: #1f633a;
 }
