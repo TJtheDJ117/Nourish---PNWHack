@@ -100,6 +100,7 @@ body::-webkit-scrollbar {
     align-items: center;
     justify-content: center;
     text-decoration: none;
+    font-weight: 525;
     padding: 0 1rem;
     height: 100%;
 }
@@ -122,6 +123,7 @@ body::-webkit-scrollbar {
     width: 100%;
     background: #a3b18a;
     color: #fff;
+    font-weight: 525;
 }
 
 .button:hover {
@@ -330,4 +332,14 @@ body::-webkit-scrollbar {
     border-bottom: 1px solid #000; /* Add a solid line */
     width: 100%; /* Set the line width to span the container */
     margin-bottom: 20px; /* Add a bottom margin to create spacing */
+  }
+
+  .highlight {
+    font-weight: 600;
+    color: #344e41;
+  }
+
+  .less-highlight {
+    font-weight: 600;
+    color: #a3b18a;
   }
