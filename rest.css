@@ -1,37 +1,45 @@
   .welcome {
-    color: #fff;
-    padding-left: 30px;
+    color: #dad7cd;
+    padding-left: 50px;
+    font-family: 'La Belle Aurore', cursive;
+    font-size: 60px;
   }
 
   body {
-    background: radial-gradient(#fff, #3a5a40);
-
+    background: #3a5a40;
   }
 
   .container {
     display: flex;
     height: 100vh;
-    color: #3a5a40;
+    color: #dad7cd;
   }
   
   .half {
+    padding-left: 40px;
     flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: left;
   }
   
   .content {
-    padding: 10px;
+    padding: 10px; 
     position: relative;
     top: -150px;
     font-size: 30px;
+  }
+
+  .header {
     text-decoration: underline;
+    color: #dad7cd;
+    font-weight: 600;
   }
 
   img {
-    width: 50%;
+    width: 70%;
     height: auto;
+    margin-bottom: 90px;
   }
   
