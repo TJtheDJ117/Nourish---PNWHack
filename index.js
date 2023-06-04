@@ -24,6 +24,11 @@ const firebaseConfig = {
         snapshot.docs.forEach((doc) => {
             shelters.push({ ...doc.data(), id: doc.id })
         })
-        console.log("HERE 2");
         console.log(shelters);
+    })
+    
+    const addResForm = document.querySelector('.add')
+    addResForm.addEventListener('submit', (e) => {
+        e.preventDefault()
+
     })
