@@ -15,9 +15,9 @@ signupForm.addEventListener('submit', (e) => {
     var optionValue = selectedOption.value;
     console.log(optionValue);
     if(optionValue === "restaurants") {
-      window.location.href = './rest.html'
+      window.location.href = './restaurant.html'
     } else {
-      window.location.href = './restraunt.html'
+      window.location.href = './rest.html'
     }
     // getDatabase();
     signupForm.reset();
