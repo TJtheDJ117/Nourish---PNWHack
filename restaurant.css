@@ -1,23 +1,57 @@
 .stats {
-    background-color: #042716;
+    background-color: #3a5a40;
     color: #FFFFFF;
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 20px;
+    text-align: center;
 }
 
-h1 {
-text-align: center;
+.foodButton {
+    outline: none;
+    box-shadow: none;
+    background-color: #a3b18a;
+    color: #FFFFFF;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    margin: 0;
+    padding: 20px;
+    font-size: 15px;
 }
 
 .address {
-margin-top: 30px;
+    margin-top: 30px;
 }
 
-.address h2 {
-margin-bottom: 5px;
+.address button {
+    margin-bottom: 5px;
 }
 
 .address p {
-margin: 0;
+    margin: 0;
 }
+
+.popup {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+  }
+
+
+  .welcome {
+    color: #dad7cd;
+    padding-left: 50px;
+    font-family: 'La Belle Aurore', cursive;
+    font-size: 60px;
+  }
+
+  body {
+    background: #3a5a40;
+  }

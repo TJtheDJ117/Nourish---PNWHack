@@ -1,11 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Green Food Banks</title>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="restaurant.css">
+    <title>Green Food Banks</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nourish: sustainable meals</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="restaurant.css">
+    <script src="https://kit.fontawesome.com/551c1a5b2f.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=La+Belle+Aurore&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/20dec758df.js" crossorigin="anonymous"></script>
 </head>
     <body>
+        <script type="module" src="restaurant.js"></script>
+        <script type="module" src="restaurant.js">
+        </script>
         <nav class="navbar">
             <div class="navbar__container">
                 <a href="index.html" id="navbar__logo"><i class="fa-solid fa-fork-knife"></i> nourish.</a>
@@ -31,24 +44,40 @@
             </div>
         </nav>
         <div class="stats">
-            <h1>Welcome to the Green Food Banks</h1>
+            <h1 class="welcome">Welcome, <span class="less-highlight">Red Robin</span>.</h1>
         
             <div class="address">
-                <h2>Ballard Food Bank</h2>
+                <button id="myButton" class="foodButton">Maltby Food Bank</button>
+                <div id="myPopup" class="popup">
+                    console.log("HERE);
+                    <h2>Choose your donation amount</h2>
+                    <p>This is the content of the popup.</p>
+                    <button onclick="myPopup.style.display = 'none';">Close</button>
+                </div>
                 <p>5130 Leary Ave NW,</p>
                 <p> Seattle, WA, 98107</p>
                 <p>Phone: +1 (555) 867-5309</p>
             </div>
         
             <div class="address">
-                <h2>Pike Market Food Bank</h2>
+                <button class="foodButton">Pike Market Food Bank</button>
+                <div class="popup">
+                    <h2>Choose your donation amount</h2>
+                    <p>This is the content of the popup.</p>
+                    <button onclick="myPopup.style.display = 'none';">Close</button>
+                </div>
                 <p>1531 Western Ave,</p>
                 <p>Seattle, WA, 98101</p>
                 <p>Phone: +1 (987) 654-3210</p>
             </div>
         
             <div class="address">
-                <h2>Rainer Valley Food Bank</h2>
+                <button class="foodButton">Rainer Valley Food Bank</button>
+                <div class="popup">
+                    <h2>Choose your donation amount</h2>
+                    <p>This is the content of the popup.</p>
+                    <button onclick="myPopup.style.display = 'none';">Close</button>
+                </div>
                 <p>4205 Rainier Ave S,</p>
                 <p>Seattle, WA, 98118</p>
                 <p>Phone: +1 (123) 456-7890</p>
