@@ -18,7 +18,30 @@ body::-webkit-scrollbar {
     background-color: #F5F5F5;
     outline: 1px solid #F5F5F5;
   }
+  .navbar__item {
+    display: inline-block;
+    position: relative;
+    padding-bottom: 2px;
+    margin-right: 20px;
+    cursor: pointer;
+  }
   
+  .navbar__item::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    transform: scaleX(0); /* Initial state of the underline */
+    transform-origin: left;
+    transition: transform 0.3s ease;
+  }
+  
+  .navbar__item:hover::after {
+    transform: scaleX(1); /* Underline expands to full width on hover */
+  }
 .navbar {
     background: #344e41;
     height: 80px;
