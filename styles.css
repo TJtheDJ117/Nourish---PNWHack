@@ -292,3 +292,7 @@ body::-webkit-scrollbar {
   .support-button:hover {
     background-color: #344e41;
   }
+
+  .footer {
+    font-size: 1rem;
+  }
