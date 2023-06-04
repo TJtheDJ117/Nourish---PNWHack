@@ -6,65 +6,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login / Sign-Up</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="account.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <form onSubmit="getDatabase()" class="signup">
-  <nav class="navbar">
-    <div class="navbar__container">
-        <a href="index.html" id="navbar__logo"><i class="fa-solid fa-fork-knife"></i> nourish.</a>
-        <div class="navbar__toggle" id="mobile-menu">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </div>
-        <ul class="navbar__menu">
-            <li class="navbar__item">
-                <a href="index.html" class="navbar__links">Home</a>
-            </li>
-            <li class="navbar__item">
-                <a href="why.html" class="navbar__links">Why?</a>
-            </li>
-            <li class="navbar__item">
-                <a href="leaderboard.html" class="navbar__links">Leaderboard</a>
-            </li>
-            <li class="navbar__btn">
-                <a href="account.html" class="button">Sign Up</a>
-            </li>
-        </ul>
-    </div>
-  </nav>
-  <br>
-  
     <form class="signup">
-        <label for="name">Company Name: </label>
-        <input type="text" name="name">
+        <nav class="navbar">
+            <div class="navbar__container">
+                <a href="index.html" id="navbar__logo"><i class="fa-solid fa-fork-knife"></i> nourish.</a>
+                <div class="navbar__toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                <ul class="navbar__menu">
+                    <li class="navbar__item">
+                        <a href="index.html" class="navbar__links">Home</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="why.html" class="navbar__links">Why?</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="leaderboard.html" class="navbar__links">Leaderboard</a>
+                    </li>
+                    <li class="navbar__btn">
+                        <a href="account.html" class="button">Sign Up</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <br>
+        <div class="containerContainer">
+            <div class="container">
+                <label for="name">Company Name:</label>
+                <input type="text" name="name">
 
-        <label for="email">Email: </label>
-        <input type="email" name="email">
+                <label for="email">Email:</label>
+                <input type="email" name="email">
 
-        <label for="password">Password: </label>
-        <input type="password" name="password">
+                <label for="password">Password:</label>
+                <input type="password" name="password">
 
-        <label for="address">Address: </label>
-        <input type="text" name="address">
+                <label for="address">Address:</label>
+                <input type="text" name="address">
 
-        <div class="form-group">
-            <label for="option2">
-              <input type="radio" id="option2" name="options" value="restaurants">
-              Restaurant
-            </label>
-          </div>
-        <div class="form-group">
-            <label for="option3">
-              <input type="radio" id="option3" name="options" value="FoodShelters">
-              Food Shelter
-            </label>
+                <div class="form-group">
+                    <label for="option2">
+                        <input type="radio" id="option2" name="options" value="restaurants">
+                        Restaurant
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label for="option3">
+                        <input type="radio" id="option3" name="options" value="FoodShelters">
+                        Food Shelter
+                    </label>
+                </div>
+                <button type="submit">Signup</button>
+            </div>
         </div>
-        <button type="submit">Signup</button>
     </form>
-    <script type="module" src="index.js"></script>
-</body>
-</html>
+    <script type="module" src="index
