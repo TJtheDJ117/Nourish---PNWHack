@@ -1,3 +1,59 @@
-ul {
+  ul {
     list-style-type: disc;
-}
+    padding-left: 40px;
+  }
+
+  li::marker {
+    color: #344e41;
+  }
+
+  .WHY {
+    position: relative;
+    top: -50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    width: 180vh;
+    bottom: auto;
+    margin-bottom: -70px;
+  }
+
+  .facts {
+    text-align: left;
+    flex-grow: 1;
+    font-size: 25px;
+  }
+
+  h1, h2, h3 {
+    font-weight: 500;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 25px;
+  }
+
+  #foodstatsimg {
+    width: 40%;
+    height: auto;
+    padding-left: 60px;
+  }
+
+  .endorsements {
+    text-decoration: underline #344e41;
+  }
+
+  .endorse {
+    text-align: center;
+    font-size: 20px;
+  }
+
+  .quote {
+    font-style: italic;
+  }
+
+  .person {
+    font-weight: 515;
+    color: #344e41;
+  }
