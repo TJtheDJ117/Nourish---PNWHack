@@ -1,0 +1,46 @@
+.leaderboard {
+    font-family: Arial, sans-serif; 
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    max-width: 700px;
+    margin: 20px auto;
+    background-color: #f0f8f3;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.leaderboard-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #1f633a;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.leaderboard-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.leaderboard-rank {
+    font-size: 18px;
+    font-weight: bold;
+    color: #1f633a;
+    width: 30px;
+}
+
+.leaderboard-name {
+    flex-grow: 1;
+    font-size: 16px;
+    color: #333333;
+    padding-left: 10px;
+}
+
+.leaderboard-score {
+    font-size: 18px;
+    font-weight: bold;
+    color: #1f633a;
+}
