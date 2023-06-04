@@ -1,4 +1,7 @@
 import { initilizeApp } from 'firebase/app'
+import {
+    getFirestore, collection, getDocs
+} from 'firebase/firestore'
 
 const firebaseConfig = {
     apiKey: "AIzaSyBU8jhw82rdDlTB37TIBdBoNrFWG5lTIjQ",
@@ -10,3 +13,12 @@ const firebaseConfig = {
   };
 
   initilizeApp(firebaseConfig)
+
+  const db = getFirestore()
+
+  const colRef = collection(db, 'FoodShelters')
+
+  getDocs(colRef)
+    .then((snapshot) => {
+        console.log(snapshot.docs)
+    })
