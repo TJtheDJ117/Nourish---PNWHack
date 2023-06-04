@@ -32,7 +32,6 @@ const firebaseConfig = {
 const signupForm = document.querySelector('.signup')
 signupForm.addEventListener('submit', (e) => {
   e.preventDefault();
-  console.log("here")
 
   const email = signupForm.email.value;
   const password = signupForm.password.value;
