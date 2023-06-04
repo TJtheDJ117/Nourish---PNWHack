@@ -1,6 +1,6 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-app.js";
   import { 
-    getFirestore, doc, getDoc, getDocs, collection, addDoc
+    getFirestore, doc, getDoc, getDocs, collection, addDoc, query, orderBy
 } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-firestore.js";
 import { getAuth, createUserWithEmailAndPassword } from 'https://www.gstatic.com/firebasejs/9.0.0/firebase-auth.js';
 const firebaseConfig = {
@@ -17,18 +17,21 @@ const firebaseConfig = {
   //const db = getFirestore()
   //const auth = getAuth(firebaseApp);
 
-  var db = firebase.getFirestore();
+  var db = getFirestore();
+console.log(db)
+async function makeBoard() {
+  try {
+    const collectionRef = collection(db, 'Restaurants');
+    const q = query(collectionRef, orderBy('FoodGiven'));
+    const snapshot = await getDocs(q);
 
-function makeBoard() {
-    console.log("HERE");
-    var collectionRef = db.collection('Restaurants');
-    databaseRef.orderByChild('FoodGiven').on('value', (snapshot) => {
-    snapshot.forEach((childSnapshot) => {
-    const childData = childSnapshot.val();
-    console.log(databaseRef);
-    console.log(childData);
-        });
+    snapshot.forEach((doc) => {
+      const data = doc.data();
+      console.log(data);
     });
+  } catch (error) {
+    console.log("Error getting documents: ", error);
+  }
 }
 
 makeBoard();
