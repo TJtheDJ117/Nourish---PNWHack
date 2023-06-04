@@ -21,8 +21,7 @@ const firebaseConfig = {
   getDocs(colRef)
     .then((snapshot) => {
         let shelters = [];
-        console.log(snapshot.docs);
-        snapshot.docs.array.forEach((doc) => {
+        snapshot.docs.forEach((doc) => {
             shelters.push({ ...doc.data(), id: doc.id })
         })
         console.log("HERE 2");
