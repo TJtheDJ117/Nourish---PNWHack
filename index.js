@@ -2,7 +2,8 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/9.4.0/firebase
   import { 
     getFirestore, doc, getDoc, getDocs, collection, addDoc
 } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-firestore.js";
-import { getAuth, createUserWithEmailAndPassword } from 'https://www.gstatic.com/firebasejs/9.0.0/firebase-auth.js';
+import { getAuth, createUserWithEmailAndPassword } from 'https://www.gstatic.com/firebasejs/9.4.0/firebase-auth.js';
+
 const firebaseConfig = {
     apiKey: "AIzaSyBU8jhw82rdDlTB37TIBdBoNrFWG5lTIjQ",
     authDomain: "hackpnw-25ec0.firebaseapp.com",
@@ -55,6 +56,7 @@ signupForm.addEventListener('submit', (e) => {
   console.log(password);
   createUserWithEmailAndPassword(auth, email, password).then((cred) => {
     console.log('user created: ' + cred.user);
+    getDatabase();
     signupForm.reset();
   }).catch((err) => {
     console.log()
