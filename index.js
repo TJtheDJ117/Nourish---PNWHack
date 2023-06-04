@@ -24,7 +24,6 @@ const firebaseConfig = {
         snapshot.docs.forEach((doc) => {
             shelters.push({ ...doc.data(), id: doc.id })
         })
-        console.log("HERE 2");
         console.log(shelters);
     })
 
@@ -33,4 +32,22 @@ const firebaseConfig = {
 const signupForm = document.querySelector('.signup')
 signupForm.addEventListener('submit', (e) => {
   e.preventDefault();
+  console.log("here")
+
+  const email = signupForm.email.value;
+  const password = signupForm.password.value;
+  console.log(email);
+  console.log(password);
+  createUserWithEmailAndPassword(auth, email, password).then((cred) => {
+    console.log('user created: ' + cred.user);
+    signupForm.reset();
+  }).catch((err) => {
+    console.log()
+  })
 })
+    
+    const addResForm = document.querySelector('.add')
+    addResForm.addEventListener('submit', (e) => {
+        e.preventDefault()
+
+    })

@@ -100,6 +100,7 @@ body::-webkit-scrollbar {
     align-items: center;
     justify-content: center;
     text-decoration: none;
+    font-weight: 525;
     padding: 0 1rem;
     height: 100%;
 }
@@ -122,6 +123,7 @@ body::-webkit-scrollbar {
     width: 100%;
     background: #a3b18a;
     color: #fff;
+    font-weight: 525;
 }
 
 .button:hover {
@@ -248,7 +250,7 @@ body::-webkit-scrollbar {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 70vh;
+    height: 100vh;
     background: radial-gradient(#fff, #3a5a40);
     background-size: cover;
     background-position: center;
@@ -257,12 +259,18 @@ body::-webkit-scrollbar {
   .title {
     font-size: 6rem;
     color: #344e41;
+    margin-block-start: 0.01em;
+    margin-block-end: 0.01em;
     text-align: center;
     letter-spacing: 2px;
+    font-weight: 1;
+    font-family: 'La Belle Aurore', cursive;
   }
 
   .maintitle {
     font-size: 8rem;
+    margin-block-start: 0.01em;
+    margin-block-end: 0.01em;
     color: #344e41;
     text-align: center;
     text-transform: lowercase;
@@ -324,4 +332,14 @@ body::-webkit-scrollbar {
     border-bottom: 1px solid #000; /* Add a solid line */
     width: 100%; /* Set the line width to span the container */
     margin-bottom: 20px; /* Add a bottom margin to create spacing */
+  }
+
+  .highlight {
+    font-weight: 600;
+    color: #344e41;
+  }
+
+  .less-highlight {
+    font-weight: 600;
+    color: #a3b18a;
   }
