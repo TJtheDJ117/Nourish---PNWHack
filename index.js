@@ -1,7 +1,7 @@
-import { initilizeApp } from 'firebase/app'
-import {
-    getFirestore, collection, getDocs
-} from 'firebase/firestore'
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-app.js";
+  import { 
+    getFirestore, doc, getDoc, getDocs, collection 
+} from "https://www.gstatic.com/firebasejs/9.4.0/firebase-firestore.js";
 
 const firebaseConfig = {
     apiKey: "AIzaSyBU8jhw82rdDlTB37TIBdBoNrFWG5lTIjQ",
@@ -12,7 +12,7 @@ const firebaseConfig = {
     appId: "1:1048253409903:web:4813b9a55d64a4fa0ebb9a"
   };
 
-  initilizeApp(firebaseConfig)
+  initializeApp(firebaseConfig)
 
   const db = getFirestore()
 
