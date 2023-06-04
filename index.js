@@ -2,7 +2,7 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/9.4.0/firebase
   import { 
     getFirestore, doc, getDoc, getDocs, collection, addDoc
 } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-firestore.js";
-import { getAuth, createUserWithEmailAndPassword } from 'https://www.gstatic.com/firebasejs/9.4.0/firebase-auth.js';
+import { getAuth } from 'https://www.gstatic.com/firebasejs/9.4.0/firebase-auth.js';
 
 const firebaseConfig = {
     apiKey: "AIzaSyBU8jhw82rdDlTB37TIBdBoNrFWG5lTIjQ",
@@ -16,15 +16,15 @@ const firebaseConfig = {
   const firebaseApp = initializeApp(firebaseConfig)
 
   const db = getFirestore()
-  const auth = getAuth(firebaseApp);
+  export const auth = getAuth(firebaseApp);
 
 function getDatabase() {
     var selectedOption = document.querySelector('input[name="options"]:checked');
     var optionValue = selectedOption.value;
     if (optionValue == "restaurants") {
         const colRef = collection(db, 'FoodShelters')
-        const addResForm = document.querySelector('.add')
-        addResForm.addEventListener('submit', (e) => {
+        const addShelForm = document.querySelector('.add')
+        addShelForm.addEventListener('submit', (e) => {
             e.preventDefault()
             addDoc(colRef, {
                 Name: addResForm.name.value,
@@ -33,32 +33,43 @@ function getDatabase() {
         })
     } else {
         const colRef = collection(db, 'Restaurants')
-        const addShelForm = document.querySelector('.add')
+        const addResForm = document.querySelector('.add');
         addResForm.addEventListener('submit', (e) => {
-            e.preventDefault()
-            addDoc(colRef, {
-                Name: addShelForm.name.value,
-                Address: addShelForm.Address.value,
-            })
-        })
+        e.preventDefault();
+        addDoc(colRef, {
+          Name: addResForm.name.value,
+          Address: addResForm.Address.value,
+      });
+    });
+
     }
 }
 
 
-//signing users up
-const signupForm = document.querySelector('.signup')
-signupForm.addEventListener('submit', (e) => {
-  e.preventDefault();
+function checkLoginStatus() {
+  // Assuming you have initialized Firebase Auth and have the 'auth' object available
 
-  const email = signupForm.email.value;
-  const password = signupForm.password.value;
-  console.log(email);
-  console.log(password);
-  createUserWithEmailAndPassword(auth, email, password).then((cred) => {
-    window.location.href = 'index.html';
-    // getDatabase();
-    signupForm.reset();
-  }).catch((err) => {
-    console.log()
-  })
-})
+  // Get the current user
+  const currentUser = auth.currentUser;
+  console.log(currentUser)
+  // Return true if a user is logged in, false otherwise
+  return !!currentUser;
+}
+
+var isLoggedIn = checkLoginStatus();
+console.log(isLoggedIn)
+// Get references to the HTML elements
+var loggedInContent = document.querySelector('.loggedIn');
+var loggedOutContent = document.querySelector('.loggedOut');
+
+// Verify the selected elements
+console.log(loggedInContent); // Check if the element is selected correctly
+
+// Use conditional statements to prevent errors
+if (loggedInContent) {
+  loggedInContent.style.display = 'block';
+}
+
+if (loggedOutContent) {
+  loggedOutContent.style.display = 'none';
+}

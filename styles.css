@@ -238,7 +238,7 @@ body::-webkit-scrollbar {
         font-size: 30px;
     }
 }
-.main {
+.loggedOut {
     display: flex;
 }
 
