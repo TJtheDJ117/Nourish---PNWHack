@@ -10,7 +10,7 @@ signupForm.addEventListener('submit', (e) => {
   console.log(email);
   console.log(password);
   createUserWithEmailAndPassword(auth, email, password).then((cred) => {
-    window.location.href = 'index.html';
+    window.location.href = './index.html';
     getDatabase();
     signupForm.reset();
   }).catch((err) => {

@@ -238,12 +238,15 @@ body::-webkit-scrollbar {
         font-size: 30px;
     }
 }
-.loggedOut {
+#loggedOut {
     display: flex;
 }
 
 .main__container {
     flex: 1;
+}
+.hidden {
+    display: none;
 }
 .title-container {
     display: flex;
