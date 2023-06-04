@@ -296,3 +296,9 @@ body::-webkit-scrollbar {
   .footer {
     font-size: 1rem;
   }
+
+  .line {
+    border-bottom: 1px solid #000; /* Add a solid line */
+    width: 100%; /* Set the line width to span the container */
+    margin-bottom: 20px; /* Add a bottom margin to create spacing */
+  }
