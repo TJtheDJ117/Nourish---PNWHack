@@ -73,6 +73,6 @@ signupForm.addEventListener('submit', (e) => {
     console.log('user created: ' + cred.user);
     signupForm.reset();
   }).catch((err) => {
-    console.log()
+    console.log("NOT WORKING")
   })
 })
