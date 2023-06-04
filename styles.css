@@ -284,11 +284,11 @@ body::-webkit-scrollbar {
     padding: 1rem 2rem;
     font-size: 1.5rem;
     color: #fff;
-    background-color: #00b300;
+    background-color: #1e6b54;
     text-decoration: none;
     border-radius: 4px;
   }
   
   .support-button:hover {
-    background-color: #009900;
+    background-color: #344e41;
   }
