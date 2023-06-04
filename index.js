@@ -55,8 +55,8 @@ signupForm.addEventListener('submit', (e) => {
   console.log(email);
   console.log(password);
   createUserWithEmailAndPassword(auth, email, password).then((cred) => {
-    console.log('user created: ' + cred.user);
-    getDatabase();
+    window.location.href = 'index.html';
+    // getDatabase();
     signupForm.reset();
   }).catch((err) => {
     console.log()
