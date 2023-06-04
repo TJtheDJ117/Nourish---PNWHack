@@ -22,7 +22,6 @@ const firebaseApp = initializeApp(firebaseConfig);
 
 const db = getFirestore();
 export const auth = getAuth(firebaseApp);
-
 function getDatabase() {
   var selectedOption = document.querySelector('input[name="options"]:checked');
   var optionValue = selectedOption.value;

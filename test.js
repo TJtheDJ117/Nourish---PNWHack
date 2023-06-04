@@ -4,14 +4,22 @@ import { createUserWithEmailAndPassword } from 'https://www.gstatic.com/firebase
 const signupForm = document.querySelector('.signup')
 signupForm.addEventListener('submit', (e) => {
   e.preventDefault();
-
   const email = signupForm.email.value;
   const password = signupForm.password.value;
-  console.log(email);
-  console.log(password);
+  const res = document.getElementById("loggedInRes")
+  const shel = document.getElementById("loggedInShel")
+  const normal = document.getElementById("loggedOut")
+  console.log(document.getElementById("loggedInRes"));
   createUserWithEmailAndPassword(auth, email, password).then((cred) => {
-    window.location.href = './index.html';
-    getDatabase();
+    var selectedOption = document.querySelector('input[name="options"]:checked');
+    var optionValue = selectedOption.value;
+    console.log(optionValue);
+    if(optionValue === "restaurants") {
+      window.location.href = './rest.html'
+    } else {
+      window.location.href = './restraunt.html'
+    }
+    // getDatabase();
     signupForm.reset();
   }).catch((err) => {
     console.log()
