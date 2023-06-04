@@ -2,7 +2,9 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/9.4.0/firebase
   import { 
     getFirestore, doc, getDoc, getDocs, collection 
 } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-firestore.js";
-
+import {
+  getAuth
+} from 'firebase/auth'
 const firebaseConfig = {
     apiKey: "AIzaSyBU8jhw82rdDlTB37TIBdBoNrFWG5lTIjQ",
     authDomain: "hackpnw-25ec0.firebaseapp.com",
@@ -15,7 +17,7 @@ const firebaseConfig = {
   initializeApp(firebaseConfig)
 
   const db = getFirestore()
-
+  const auth = getAuth()
   const colRef = collection(db, 'FoodShelters')
 
   getDocs(colRef)
