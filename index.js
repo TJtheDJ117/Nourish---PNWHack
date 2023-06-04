@@ -16,22 +16,6 @@ const firebaseConfig = {
 
   const db = getFirestore()
   const auth = getAuth(firebaseApp);
-  const colRef = collection(db, 'FoodShelters')
-
-    // getDocs(colRef)
-    //     .then((snapshot) => {
-    //         let shelters = [];
-    //         snapshot.docs.forEach((doc) => {
-    //             shelters.push({ ...doc.data(), id: doc.id })
-    //         })
-    //         //console.log(shelters);
-    //     })
-        
-        const addResForm = document.querySelector('.add')
-        addResForm.addEventListener('submit', (e) => {
-            e.preventDefault()
-            addDoc()
-        })
 
 function getDatabase() {
     var selectedOption = document.querySelector('input[name="options"]:checked');
@@ -73,6 +57,6 @@ signupForm.addEventListener('submit', (e) => {
     console.log('user created: ' + cred.user);
     signupForm.reset();
   }).catch((err) => {
-    console.log("NOT WORKING")
+    console.log()
   })
 })
