@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
+    <form onSubmit="getDatabase()" class="signup">
   <nav class="navbar">
     <div class="navbar__container">
         <a href="index.html" id="navbar__logo"><i class="fa-solid fa-fork-knife"></i> nourish.</a>
@@ -39,7 +40,7 @@
   
     <form class="signup">
         <label for="name">Company Name: </label>
-        <input type="text" name="email">
+        <input type="text" name="name">
 
         <label for="email">Email: </label>
         <input type="email" name="email">
@@ -64,5 +65,6 @@
         </div>
         <button type="submit">Signup</button>
     </form>
+    <script type="module" src="index.js"></script>
 </body>
 </html>

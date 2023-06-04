@@ -1,6 +1,6 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-app.js";
   import { 
-    getFirestore, doc, getDoc, getDocs, collection 
+    getFirestore, doc, getDoc, getDocs, collection, addDoc
 } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-firestore.js";
 import { getAuth, createUserWithEmailAndPassword } from 'https://www.gstatic.com/firebasejs/9.0.0/firebase-auth.js';
 const firebaseConfig = {
@@ -18,14 +18,46 @@ const firebaseConfig = {
   const auth = getAuth(firebaseApp);
   const colRef = collection(db, 'FoodShelters')
 
-  getDocs(colRef)
-    .then((snapshot) => {
-        let shelters = [];
-        snapshot.docs.forEach((doc) => {
-            shelters.push({ ...doc.data(), id: doc.id })
+    // getDocs(colRef)
+    //     .then((snapshot) => {
+    //         let shelters = [];
+    //         snapshot.docs.forEach((doc) => {
+    //             shelters.push({ ...doc.data(), id: doc.id })
+    //         })
+    //         //console.log(shelters);
+    //     })
+        
+        const addResForm = document.querySelector('.add')
+        addResForm.addEventListener('submit', (e) => {
+            e.preventDefault()
+            addDoc()
         })
-        console.log(shelters);
-    })
+
+function getDatabase() {
+    var selectedOption = document.querySelector('input[name="options"]:checked');
+    var optionValue = selectedOption.value;
+    if (optionValue == "restaurants") {
+        const colRef = collection(db, 'FoodShelters')
+        const addResForm = document.querySelector('.add')
+        addResForm.addEventListener('submit', (e) => {
+            e.preventDefault()
+            addDoc(colRef, {
+                Name: addResForm.name.value,
+                Address: addResForm.Address.value,
+            })
+        })
+    } else {
+        const colRef = collection(db, 'Restaurants')
+        const addShelForm = document.querySelector('.add')
+        addResForm.addEventListener('submit', (e) => {
+            e.preventDefault()
+            addDoc(colRef, {
+                Name: addShelForm.name.value,
+                Address: addShelForm.Address.value,
+            })
+        })
+    }
+}
 
 
 //signing users up
@@ -41,12 +73,6 @@ signupForm.addEventListener('submit', (e) => {
     console.log('user created: ' + cred.user);
     signupForm.reset();
   }).catch((err) => {
-    console.log()
+    console.log("NOT WORKING")
   })
 })
-    
-    const addResForm = document.querySelector('.add')
-    addResForm.addEventListener('submit', (e) => {
-        e.preventDefault()
-
-    })
