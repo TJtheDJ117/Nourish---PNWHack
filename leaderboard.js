@@ -18,7 +18,7 @@ const firebaseConfig = {
   //const auth = getAuth(firebaseApp);
 
   var db = getFirestore();
-console.log(db)
+  var arr = [];
 async function makeBoard() {
   try {
     const collectionRef = collection(db, 'Restaurants');
@@ -26,8 +26,7 @@ async function makeBoard() {
     const snapshot = await getDocs(q);
 
     snapshot.forEach((doc) => {
-      const data = doc.data();
-      console.log(data);
+      arr.push(doc.data());
     });
   } catch (error) {
     console.log("Error getting documents: ", error);
@@ -35,3 +34,12 @@ async function makeBoard() {
 }
 
 makeBoard();
+
+async function printLeaderboard() {
+  await makeBoard();
+  for(let i = arr.length - 1; i >= 0; i--) {
+      console.log(arr[i]);
+  }
+}
+
+printLeaderboard();
